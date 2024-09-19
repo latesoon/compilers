@@ -1,0 +1,40 @@
+
+;; Function main (null)
+;; enabled by -tree-original
+
+
+{
+  int a[3];
+  int b = 2;
+
+    int a[3];
+    int b = 2;
+  a[2] = 1;
+  {
+    int i = 0;
+
+        int i = 0;
+    goto <D.2353>;
+    <D.2352>:;
+    if (c == 1.0e+0)
+      {
+        goto <D.2350>;
+      }
+    if (a[2] == 10)
+      {
+        // predicted unlikely by continue predictor.;
+        goto <D.2351>;
+      }
+    a[2]++ ;
+    c = c / (float) b + c;
+    <D.2351>:;
+    i++ ;
+    <D.2353>:;
+    if (i <= 14) goto <D.2352>; else goto <D.2350>;
+    <D.2350>:;
+  }
+  printf ((const char * restrict) "a[2]=%d c=%f", a[2], (double) c);
+  return 0;
+}
+return 0;
+
